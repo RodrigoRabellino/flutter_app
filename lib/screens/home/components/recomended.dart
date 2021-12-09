@@ -19,9 +19,11 @@ class RecomendsList extends StatelessWidget {
             country: "Italy",
             price: 440,
             onPress: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const DetailsScreen(),
-              ));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailsScreen(),
+                  ));
             },
           ),
           RecomendPlantCard(
@@ -29,7 +31,13 @@ class RecomendsList extends StatelessWidget {
             title: "Tannia",
             country: "Russia",
             price: 220,
-            onPress: () => {},
+            onPress: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DetailsScreen(),
+                  ));
+            },
           ),
           RecomendPlantCard(
             imageUrl: "assets/images/image_3.png",
