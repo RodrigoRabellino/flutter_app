@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -14,7 +16,7 @@ class RecomendPlantCard extends StatelessWidget {
 
   final String imageUrl, title, country;
   final int price;
-  final Function onPress;
+  final VoidCallback onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +83,7 @@ class RecomendPlantCard extends StatelessWidget {
       elevation: 5,
       child: InkWell(
         splashColor: kPrimaryColor.withOpacity(0.23),
-        onTap: () => onPress,
+        onTap: onPress,
         child: Column(
           children: [
             Image.asset(
